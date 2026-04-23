@@ -1,0 +1,10 @@
+{
+  "title": "Troubleshooting",
+  "search": "Search symptom (ID or description)",
+  "back": "Back",
+  "field": "Field observable",
+  "inspection": "Requires inspection / measurement",
+  "internal": "Internal / inferred",
+  "locked": "Locked – resolve previous level first",
+  "sop_missing": "SOP missing – escalate with Symptom ID"
+}

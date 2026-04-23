@@ -1,0 +1,10 @@
+{
+  "title": "Fehlerbehebung",
+  "search": "Symptom suchen (ID oder Beschreibung)",
+  "back": "Zurück",
+  "field": "Vor Ort beobachtbar",
+  "inspection": "Inspektion / Messung erforderlich",
+  "internal": "Intern / abgeleitet",
+  "locked": "Gesperrt – vorherige Stufe lösen",
+  "sop_missing": "SOP fehlt – mit Symptom-ID eskalieren"
+}

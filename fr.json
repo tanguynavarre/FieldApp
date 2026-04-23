@@ -1,0 +1,10 @@
+{
+  "title": "Dépannage",
+  "search": "Rechercher un symptôme (ID ou description)",
+  "back": "Retour",
+  "field": "Observable sur site",
+  "inspection": "Inspection / mesure requise",
+  "internal": "Interne / déduit",
+  "locked": "Bloqué – résoudre le niveau précédent",
+  "sop_missing": "SOP manquante – escalader avec l’ID du symptôme"
+}

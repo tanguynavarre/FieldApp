@@ -1,0 +1,10 @@
+{
+  "title": "Probleemoplossing",
+  "search": "Zoek symptoom (ID of beschrijving)",
+  "back": "Terug",
+  "field": "Waarneembaar op locatie",
+  "inspection": "Inspectie / meting vereist",
+  "internal": "Intern / afgeleid",
+  "locked": "Geblokkeerd – los eerst het vorige niveau op",
+  "sop_missing": "SOP ontbreekt – escaleren met symptoom-ID"
+}

@@ -1,0 +1,264 @@
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  margin: 0;
+  background: #f7f9fc;
+  color: #1f2937;
+}
+
+header {
+  text-align: center;
+  padding: 24px 16px 12px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+select,
+input,
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+}
+
+button {
+  cursor: pointer;
+  background: #ffffff;
+}
+
+button.secondary {
+  background: #374151;
+  color: white;
+  border-color: #374151;
+}
+
+.hidden {
+  display: none;
+}
+
+#container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+/* Symptom list */
+
+#symptomList {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#symptomList li {
+  background: white;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+#symptomList li:hover {
+  background: #eef2ff;
+}
+
+/* Symptom page */
+
+.symptom-title {
+  text-align: center;
+  margin: 24px 0;
+}
+
+/* Sub-issue block */
+
+.sub-issue-block {
+  background: #fff6d8;
+  border-left: 6px solid #f59e0b;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.sub-issue-title {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Actions */
+
+.action {
+  margin-bottom: 10px;
+}
+
+.action label {
+  cursor: pointer;
+}
+
+.direct-link {
+  margin-left: 8px;
+  font-size: 13px;
+}
+
+.spare-parts {
+  margin-left: 22px;
+  font-size: 13px;
+  color: #374151;
+}
+
+/* AI box */
+
+.ai-box {
+  margin-top: 14px;
+  background: #eef5ff;
+  border: 1px dashed #93c5fd;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.ai-box p {
+  margin: 0 0 8px;
+}
+
+.copy-btn {
+  margin-right: 10px;
+}
+
+/* ── Count badge ── */
+#symptomList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.count-badge {
+  background: #2563eb;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  flex-shrink: 0;
+}
+
+/* ── Causes intro ── */
+.causes-intro {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+/* ── Sub-issue header with number + category tag ── */
+.sub-issue-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.cause-num {
+  background: #f59e0b;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.sub-issue-title {
+  font-weight: 700;
+  font-size: 15px;
+  flex: 1;
+}
+.category-tag {
+  font-size: 11px;
+  font-weight: 600;
+  background: #1e3a5f;
+  color: white;
+  padding: 2px 9px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* ── Machine badge ── */
+.machine-badge {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e40af;
+  background: #dbeafe;
+  padding: 3px 14px;
+  border-radius: 12px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 20px;
+}
+
+/* ── Data note ── */
+.data-note {
+  background: #f0fdf4;
+  border-left: 4px solid #16a34a;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #166534;
+  margin-bottom: 10px;
+}
+
+/* ── Observability tags ── */
+.obs-tag {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 10px;
+  margin: 12px 0 8px;
+  display: inline-block;
+}
+.obs-remote { background: #e1f5ee; color: #065f46; }
+.obs-field  { background: #ede9fe; color: #4c1d95; }
+
+/* ── SOP missing ── */
+.sop-missing {
+  margin-left: 8px;
+  font-size: 12px;
+  color: #dc2626;
+}
+
+/* ── LP alert ── */
+.lp-alert {
+  margin-left: 22px;
+  font-size: 13px;
+  color: #dc2626;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* ── Stats ── */
+.stats-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.stat-badge            { font-size: 12px; padding: 2px 10px; border-radius: 10px; font-weight: 600; }
+.stat-badge.solve      { background: #dcfce7; color: #166534; }
+.stat-badge.risk-high  { background: #fee2e2; color: #991b1b; }
+.stat-badge.risk-medium{ background: #fef3c7; color: #92400e; }
+.stat-badge.risk-low   { background: #f0fdf4; color: #166534; }

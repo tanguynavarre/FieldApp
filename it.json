@@ -1,0 +1,10 @@
+{
+  "title": "Risoluzione dei problemi",
+  "search": "Cerca sintomo (ID o descrizione)",
+  "back": "Indietro",
+  "field": "Osservabile sul campo",
+  "inspection": "Richiede ispezione / misurazione",
+  "internal": "Interno / dedotto",
+  "locked": "Bloccato – risolvere il livello precedente",
+  "sop_missing": "SOP mancante – escalare con ID sintomo"
+}

@@ -308,22 +308,8 @@ function openSymptom(obs){
   });
   const remoteUniq=[...seenRemote.values()];
 
-  // Group field rows by stage
-  const fieldStages=new Map();
-  fieldRows.forEach(r=>{
-    const s=stageOf(r.Category||'');
-    if(!fieldStages.has(s))fieldStages.set(s,[]);
-    fieldStages.get(s).push(r);
-  });
-  const fieldSorted=[...fieldStages.entries()].sort((a,b)=>{
-    const ai=FUNNEL.indexOf(a[0]),bi=FUNNEL.indexOf(b[0]);
-    return(ai===-1?99:ai)-(bi===-1?99:bi);
-  });
-
   if(mode==='maint'){
-    // MAINTENANCE MODE: field steps + LS escalation cards for remote actions
-    let totalSteps=fieldRows.length;
-    // Expand/collapse all
+    // Steps in Symptom ID order — no category grouping
     const toggleBar=el('div','');
     toggleBar.style.cssText='display:flex;gap:8px;margin:8px 0 4px;justify-content:flex-end';
     const btnAll=el('button','');
@@ -340,25 +326,12 @@ function openSymptom(obs){
       btnAll.textContent=allCollapsed?'Expand all':'Collapse all';
     };
     resultDiv.appendChild(toggleBar);
-    let lastStage='';let currentBody=null;
-
-    fieldSorted.forEach(([stage,stageRows])=>{
-      if(stage!==lastStage){
-        const lbl=el('div','stage-label');
-        const icon=STAGE_ICONS[stage]||'🔍';
-        lbl.innerHTML=`<span>${icon} ${stage}</span><span style="font-size:9px;color:#94a3b8;font-weight:400;margin-left:4px">(${stageRows.length})</span><span class="stage-arrow">▼</span>`;
-        const body=el('div','stage-body');
-        body.style.maxHeight='2000px';
-        lbl.onclick=()=>{const col=body.classList.toggle('collapsed');lbl.classList.toggle('collapsed',col);if(!col)body.style.maxHeight=body.scrollHeight+50+'px';};
-        resultDiv.appendChild(lbl);
-        resultDiv.appendChild(body);
-        currentBody=body;
-        lastStage=stage;
-      }
-      stageRows.forEach((r,i)=>{
-        const idx=fieldRows.indexOf(r)+1;
-        renderFieldCard(r,idx,obs,fieldRows,remoteUniq,totalSteps,currentBody);
-      });
+    const totalSteps=fieldRows.length;
+    const stepsBody=el('div','stage-body');
+    stepsBody.style.maxHeight='20000px';
+    resultDiv.appendChild(stepsBody);
+    fieldRows.forEach((r,i)=>{
+      renderFieldCard(r,i+1,obs,fieldRows,remoteUniq,totalSteps,stepsBody);
     });
 
     // LS escalation section for remote-only checks
